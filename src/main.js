@@ -1,38 +1,28 @@
 document.querySelector('.menu').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = `
-        <h2>Meniu Principal</h2>
-        <p>Aici sunt elementele meniului principal...</p>
-    `;
+    document.querySelector('.content').innerHTML = getMenu();
 });
 
 document.querySelector('.fluturas').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = flyer;
+    const data = 
+    {
+        month: ["January", "March"],
+        year: [2023, 2024]
+    };
+    document.querySelector('.content').innerHTML = getFlyer(data);
 });
 
 document.querySelector('.pontaj').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = `
-        <h2>Pontaj</h2>
-        <p>Aici se află pontajul tău...</p>
-    `;
+    document.querySelector('.content').innerHTML = getPontaj();
 });
 
 document.querySelector('.concedii').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = `
-        <h2>Concedii</h2>
-        <p>Concedii ce necesită aprobare...</p>
-    `;
+    document.querySelector('.content').innerHTML = getConcedii();
 });
 
 document.querySelector('.rapoarte').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = `
-        <h2>Rapoarte</h2>
-        <p>Aici se află rapoartele tale...</p>
-    `;
+    document.querySelector('.content').innerHTML = getRapoarte();
 });
 
 document.querySelector('.cereri').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = `
-        <h2>Cereri de concediu</h2>
-        <p>Poți crea o cerere nouă de concediu aici...</p>
-    `;
+    document.querySelector('.content').innerHTML = getCereri();
 });
