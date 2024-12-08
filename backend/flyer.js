@@ -41,6 +41,10 @@ function getFlyerCopy(name, desig, empID, salarMonth, workDays, fNetIncome, sala
             font-weight: bold;
         }
 
+        .colon{
+            margin-right: 0.5em;
+        }
+
         .container {
             width: 1800px;
             display: flex;
