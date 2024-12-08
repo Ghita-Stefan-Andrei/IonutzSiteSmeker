@@ -7,7 +7,7 @@ function getFlyer(data)
                 <tr class="tableHead">
                     <td>LUNA</td>
                     <td>AN</td>
-                    <td>FLUTURAS</td>
+                    <td>SELECTARE FLUTURAS</td>
                 </tr>
     `;
 
@@ -16,8 +16,8 @@ function getFlyer(data)
             <tr class="dataLine">
                 <td class="month">${data.month[i]}</td>
                 <td class="year">${data.year[i]}</td>
-                <td class="download">
-                    <div>
+                <td class = "downloadBtn">
+                    <div class="download" data-month="${data.month[i]}" data-year="${data.year[i]}">
                         Descarca
                         <img src="resources/file_download.png" alt="Download Icon">
                     </div>
@@ -33,7 +33,7 @@ function getFlyer(data)
 
     return tableHTML;
 }
-
+           
 function getMenu()
 {
     return getTitle(`Meniu Principal`);

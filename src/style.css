@@ -171,15 +171,16 @@ body {
     border: 1px solid #b9b9b9;
     padding: 8px;
     width: 33%;
-    text-align: center; /* Centrează textul pe orizontală în celule */
-    vertical-align: middle; /* Centrează textul pe verticală în celule */
+    text-align: center; 
+    vertical-align: middle; 
+    
 }
 
 .tableHead td{
     font-weight: bold;
 }
 
-.download div{
+.download{
     background-color: hsl(160, 52%, 71%);
     border-radius: 47px;
     color: white;
@@ -190,8 +191,12 @@ body {
     align-items: center; 
     justify-content: center; 
     gap: 0.5em; 
+    margin-top: 0.1.7em;
+    cursor: pointer;
+    width:10em;
+    margin: auto;
 }
 
-.download div:hover{
+.download:hover{
     background: linear-gradient(to right, #0625CA, #1E93A6);
 }
