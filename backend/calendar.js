@@ -213,6 +213,7 @@ function getTable(month)
                     <td class="row-0-col-28 freeDay"></td>
                     <td class="row-0-col-29 freeDay"></td>
                     <td class="row-0-col-30">8h</td>
+                    <td class="row-0-col-31">8h</td>
                 </tr>
                 <tr>
                     <td class="row-1-col-0">Remote</td>
@@ -246,6 +247,7 @@ function getTable(month)
                     <td class="row-1-col-28 freeDay"></td>
                     <td class="row-1-col-29 freeDay"></td>
                     <td class="row-1-col-30"><input type="number" class="row-1-col-30-input"></td>
+                    <td class="row-1-col-31"><input type="number" class="row-1-col-31-input"></td>
                 </tr>
                 <tr>
                     <td class="row-2-col-0">Office</td>
@@ -279,6 +281,7 @@ function getTable(month)
                     <td class="row-2-col-28 freeDay"></td>
                     <td class="row-2-col-29 freeDay"></td>
                     <td class="row-2-col-30"><input type="number" class="row-2-col-30-input"></td>
+                    <td class="row-2-col-31"><input type="number" class="row-2-col-31-input"></td>
                 </tr>
                 <tr>
                     <td class="row-3-col-0">Total worked hours</td>
@@ -312,6 +315,7 @@ function getTable(month)
                     <td class="row-3-col-28 freeDay"></td>
                     <td class="row-3-col-29 freeDay"></td>
                     <td class="row-3-col-30"></td>
+                    <td class="row-3-col-31"></td>
                 </tr>
                 <tr>
                     <td class="row-4-col-0">Anual Leave</td>
@@ -345,6 +349,7 @@ function getTable(month)
                     <td class="row-4-col-28 freeDay"></td>
                     <td class="row-4-col-29 freeDay"></td>
                     <td class="row-4-col-30"></td>
+                    <td class="row-4-col-31"></td>
                 </tr>
             </table>
         `
