@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fbfbfd;
+    display: flex; /* Setează body-ul ca un container flex */
+    height: 100vh; /* Asigură că body-ul are înălțimea întregului ecran */
+}
+
+.nav{
+    background-color: #FFFFFF;
+    width: 314px; 
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navLine{
+    height: 1px; 
+    border: none; 
+    background-color: #E7E7E7;
+}
+
+.content {
+    flex-grow: 1; /* Permite elementelor din dreapta să ocupe restul spațiului */
+    background-color: #fbfbfd; /* Poți să adaugi un fundal pentru secțiunea din dreapta */
+}
+
+.logInfo img {
+    width: 58px;
+    height: 50px;
+}
+
+.logInfo p {
+    margin-left: 14px;
+    color: #637381;
+    font-family: 'Inter', sans-serif;
+}
+
+.logInfoName{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.logInfoMail{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.logInfo {
+    display: flex;
+    align-items: center; 
+    margin-top: 2em;
+    margin-bottom: 26px;
+}
+
+.teamInfo{
+    background-color: #FBFBFB;
+    border-radius: 16px;
+    padding-top: 0.55em;
+    padding-left: 0.6em;
+    padding-bottom: 0.55em;
+    box-shadow: 0px 2px 2px 0px rgba(62, 50, 60, 0.17);
+    width: 262px;
+}
+
+.teamInfo p{
+    font-family: 'Play', sans-serif;
+    color: #303354
+}
+
+.teamInfoTitle{
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 0.7em;
+}
+
+.teamInfoElement{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.teamInfo2{
+    margin-top: 17px;
+}
+
+.navList {
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 19px;
+}
+
+.navList li {
+    display: flex; 
+    align-items: center; 
+}
+
+.navList li img {
+    width: 26px;
+    height: 26px;
+    margin-right: 0.5em;
+}
+
+.navList li{
+    margin-top: 15px;
+    padding: 0.35em;
+    padding-right: 1.4em;
+    font-family: 'Play', sans-serif;
+}
+
+.navList button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navList li:hover {
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 16px;
+}
+
+.navList button:focus {
+    outline: none;
+}
+
+.contentTitle{
+    font-family: 'Play', sans-serif;
+    color: black;
+    font-size: 40px;
+    margin-top: 0.8em;
+    margin-left: 0.8em;
+}
+
+.tableHolder{
+    background-color: white;
+    width: 75%;
+    border-radius: 40px;
+    margin-left: 1.6em;
+    margin-right: 1.6em;
+    padding-left: 2.15em;
+    padding-right: 2.15em;
+    padding-top: 1.35em;
+    padding-bottom: 1.35em;
+    box-shadow: 1px 2px 2px 1px rgba(62, 50, 60, 0.17);
+}
+
+.tableHead{
+    background-color: #75d3b4;
+}
+
+.tableHolder table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center; /* Centrează textul pe orizontală */
+}
+
+.tableHolder td {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    border: 1px solid #b9b9b9;
+    padding: 8px;
+    width: 33%;
+    text-align: center; 
+    vertical-align: middle; 
+    
+}
+
+.tableHead td{
+    font-weight: bold;
+}
+
+.download{
+    background-color: hsl(160, 52%, 71%);
+    border-radius: 47px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 0.5em; 
+    margin-top: 0.1.7em;
+    cursor: pointer;
+    width:10em;
+    margin: auto;
+}
+
+.download:hover{
+    background: linear-gradient(to right, #0625CA, #1E93A6);
+}
+

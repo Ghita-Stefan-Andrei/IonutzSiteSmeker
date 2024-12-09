@@ -1,0 +1,59 @@
+.holder {
+    background-color: white;     
+    border-radius: 16px;          
+    width: 95%;                   
+    height: 30%;                  
+    margin: auto;                
+    box-sizing: border-box; 
+    box-shadow: 1px 2px 2px 1px rgba(62, 50, 60, 0.17);   
+    margin-top: 12.5%;
+    padding: 1em;
+    font-family: 'Inter', sans-serif;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.freeDay{
+    background-color: gray;
+}
+
+.anualLeave{
+    background-color: hsl(160, 52%, 71%);
+}
+
+.month{
+    margin-left: 0.64em;
+}
+
+.timesheettable input{
+    border: none;
+    width: 2.5em;
+    text-align: center;
+    font-size: 14px;
+}
+
+.timesheettable {
+    margin: auto;
+    margin-top: 1.75em;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+.timesheettable td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #b9b9b9;
+}
+
+table.timesheettable td:not(:first-child) {
+    width: 2.5em; 
+}
+
+.timesheettable tr:first-child td {
+    background-color: hsl(160, 52%, 71%);
+    color: white; 
+}

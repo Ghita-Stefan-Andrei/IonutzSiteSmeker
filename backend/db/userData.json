@@ -1,0 +1,74 @@
+{
+    "users": [
+        {
+            "id": "00000001",
+            "name": "Ion Popescu",
+            "email": "ion.popescu@example.com",
+            "manager": "Maria Ionescu",
+            "team": "Departament IT"
+        },
+        {
+            "id": "00000002",
+            "name": "Ana Ionescu",
+            "email": "ana.ionescu@example.com",
+            "manager": "Cristian Radu",
+            "team": "Marketing"
+        },
+        {
+            "id": "00000003",
+            "name": "George Marin",
+            "email": "george.marin@example.com",
+            "manager": "Alina Dobre",
+            "team": "Vânzări"
+        },
+        {
+            "id": "00000004",
+            "name": "Elena Toma",
+            "email": "elena.toma@example.com",
+            "manager": "Lucian Pavel",
+            "team": "HR"
+        },
+        {
+            "id": "00000005",
+            "name": "Radu Dumitru",
+            "email": "radu.dumitru@example.com",
+            "manager": "Silvia Popa",
+            "team": "Logistică"
+        },
+        {
+            "id": "00000006",
+            "name": "Laura Ene",
+            "email": "laura.ene@example.com",
+            "manager": "Mihai Drăgan",
+            "team": "Suport Tehnic"
+        },
+        {
+            "id": "00000007",
+            "name": "Marius Avram",
+            "email": "marius.avram@example.com",
+            "manager": "Ioana Șerban",
+            "team": "Dezvoltare Software"
+        },
+        {
+            "id": "00000008",
+            "name": "Adriana Stanciu",
+            "email": "adriana.stanciu@example.com",
+            "manager": "Victor Ilie",
+            "team": "PR"
+        },
+        {
+            "id": "00000009",
+            "name": "Bogdan Iacob",
+            "email": "bogdan.iacob@example.com",
+            "manager": "Lavinia Tudor",
+            "team": "Contabilitate"
+        },
+        {
+            "id": "00000010",
+            "name": "Claudia Neagu",
+            "email": "claudia.neagu@example.com",
+            "manager": "Andrei Roman",
+            "team": "Achiziții"
+        }
+    ]
+}
