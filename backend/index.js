@@ -58,7 +58,7 @@ app.get('/api/generate-flyer', async (req, res) => {
     console.log("GeneratedFluturas")
     const { month, year } = req.query;
     
-    const htmlContent = getFlyerCopy("Ion Popescu", "Frecator de menta", 6969, 9000, 21, 6000, 8000, 7000, 300);
+    const htmlContent = getFlyerCopy("Ion Popescu", "DevOp", 6969, 9000, 21, 6000, 8000, 7000, 300);
 
     res.setHeader('Content-Type', 'text/html');
     res.send(htmlContent);
