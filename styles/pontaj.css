@@ -19,6 +19,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .freeDay{
     background-color: gray;
+    color: gray;
 }
 
 .anualLeave{
@@ -51,11 +52,17 @@ input[type="number"]::-webkit-outer-spin-button {
     border: 1px solid #b9b9b9;
 }
 
-table.timesheettable td:not(:first-child) {
-    width: 2.5em; 
-}
-
 .tableHeader td {
     background-color: hsl(160, 52%, 71%);
     color: white; 
+}
+
+table.timesheettable td:not(:first-child) {
+    width: 4em; 
+}
+
+.tableHolderHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

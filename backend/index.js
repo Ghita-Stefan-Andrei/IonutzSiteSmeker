@@ -67,6 +67,8 @@ app.get('/api/generate-flyer', async (req, res) => {
 app.get('/api/get-month-data', (req, res) => {
     const { month } = req.query;
 
+    console.log(`Time-Sheet-Request: ${month}`);
+
     if (!month) {
         res.status(400).send('Luna nu a fost specificată!');
         return;
