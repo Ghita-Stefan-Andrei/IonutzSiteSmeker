@@ -298,7 +298,7 @@ function getTable(month)
                 </tr>
                 <tr class = "tableHeader">
                     <td></td><td>17</td><td>18</td><td>19</td><td>20</td>
-                    <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+                    <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td>
                 </tr>
                 <tr>
                     <td class="row-0-col-0">Daily norm</td>
@@ -683,7 +683,7 @@ function getTable(month)
                 </tr>
                 <tr class = "tableHeader">
                     <td></td><td>17</td><td>18</td><td>19</td><td>20</td>
-                    <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+                    <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td></td><td></td>
                 </tr>
                 <tr>
                     <td class="row-0-col-0">Daily norm</td>
