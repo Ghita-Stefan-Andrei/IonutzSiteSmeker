@@ -1,4 +1,4 @@
-function fluturas()
+function fluturas(ID)
 {
     document.querySelector('.fluturas').addEventListener('click', async () => {
         try {
@@ -15,7 +15,7 @@ function fluturas()
                     const year = e.target.getAttribute('data-year');
 
                     try {
-                        const response = await fetch(`http://localhost:3000/api/generate-flyer?month=${month}&year=${year}`, {
+                        const response = await fetch(`http://localhost:3000/api/generate-flyer?month=${month}&year=${year}&id=${ID}`, {
                             method: 'GET',
                         });
 

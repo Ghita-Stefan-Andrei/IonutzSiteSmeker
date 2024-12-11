@@ -23,5 +23,5 @@ userId = getRandomUserId()
 
 loadAccount(userId);
 
-fluturas()
+fluturas(userId)
 pontaj()

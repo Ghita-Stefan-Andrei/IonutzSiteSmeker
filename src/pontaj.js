@@ -8,11 +8,11 @@ function pontaj() {
         document.querySelector('.month').innerHTML = targetMonth;
 
         const monthSelectorBuilder = document.querySelector('#monthSelector');
-        let monthSelectorContent = '<option value="" disabled selected>Alege o lună</option>';
+        let monthSelectorContent = '';
         for (let month of months) {
             monthSelectorContent += `<option value="${month}">${month}</option>`;
         }
-        monthSelectorBuilder.innerHTML = monthSelectorContent;
+        monthSelectorBuilder.innerHTML += monthSelectorContent;
 
         for (let month of months) {
             try {
@@ -24,18 +24,28 @@ function pontaj() {
                 table.push(result);
             } catch (error) {
                 console.error('Eroare la obținerea datelor:', error);
-                table.push('<p>Eroare la încărcarea datelor!</p>'); // Placeholder pentru lunile cu erori
+                table.push('<p>Eroare la încărcarea datelor!</p>'); 
             }
         }
 
-        // Setează tabelul pentru luna curentă
         const initialIndex = months.indexOf(targetMonth);
         if (initialIndex >= 0) {
             document.querySelector('.timesheettable').innerHTML = table[initialIndex];
         }
 
-        // Gestionare schimbare lună
         const monthSelector = document.querySelector('#monthSelector');
+        const downloadButton = document.querySelector('.submite'); 
+
+        const toggleDownloadButton = (selectedMonth) => {
+            if (selectedMonth === targetMonth) {
+                downloadButton.style.display = 'block';  
+            } else {
+                downloadButton.style.display = 'none';  
+            }
+        };
+
+        toggleDownloadButton(targetMonth); 
+
         monthSelector.addEventListener('change', () => {
             const selectedMonth = monthSelector.value;
             const index = months.indexOf(selectedMonth);
@@ -43,10 +53,20 @@ function pontaj() {
             if (index >= 0) {
                 document.querySelector('.month').innerHTML = selectedMonth;
                 document.querySelector('.timesheettable').innerHTML = table[index];
+
+                toggleDownloadButton(selectedMonth);
+
+                const inputs = document.querySelectorAll('.timesheettable input');
+                inputs.forEach(input => {
+                    if (selectedMonth !== targetMonth) {
+                        input.disabled = true;  
+                    } else {
+                        input.disabled = false; 
+                    }
+                });
             }
         });
 
-        // Gestionare eveniment input
         document.addEventListener('input', () => {
             for (let col = 1; col <= 31; col++) {
                 let total = 0;

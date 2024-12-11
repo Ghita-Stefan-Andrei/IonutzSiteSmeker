@@ -1,4 +1,4 @@
-function getPontaj(month)
+function getPontaj()
 {
     let content = `${getTitle('Pontaj')}`
     
@@ -6,11 +6,12 @@ function getPontaj(month)
             <div class = "tableHolderHeader">
                 <h2 class = "month"></h2>
                 <select id = "monthSelector">
+                    <option value="" disabled selected>Alege o lună</option>
                 </select>
             </div>
             <table class="timesheettable">
             </table>
-            <div class = "download">Submite</div>
+            <div class = "submite"><div>Submite</div></div>
             </div>`;
             
     return content

@@ -66,3 +66,44 @@ table.timesheettable td:not(:first-child) {
     justify-content: space-between;
     align-items: center;
 }
+
+.submite{
+    background-color: hsl(160, 52%, 71%);
+    border-radius: 47px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 0.5em; 
+    margin-top: 0.1.7em;
+    cursor: pointer;
+    width:10em;
+    margin: auto;
+
+    display: flex;             
+    justify-content: center;   
+    align-items: center; 
+    transition: opacity 0.3s ease;
+}
+
+.submite:hover{
+    background: linear-gradient(to right, #0625CA, #1E93A6);
+}
+
+.submite.show {
+    display: flex;  
+}
+
+.submite:not(.show) {
+    display: none;  
+}
+
+.submite div{
+    width: 100%;
+    display: flex;             
+    justify-content: center;   
+    align-items: center;
+}

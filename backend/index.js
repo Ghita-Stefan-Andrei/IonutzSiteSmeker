@@ -55,13 +55,48 @@ app.get('/api/user-info', (req, res) => {
 });
 
 app.get('/api/generate-flyer', async (req, res) => {
-    console.log("GeneratedFluturas")
-    const { month, year } = req.query;
-    
-    const htmlContent = getFlyerCopy("Ion Popescu", "DevOp", 6969, 9000, 21, 6000, 8000, 7000, 300);
+    console.log("Generated Flyer");
+    const { month, year, id } = req.query;
 
-    res.setHeader('Content-Type', 'text/html');
-    res.send(htmlContent);
+    console.log(`Month: ${month}, Year: ${year}, ID: ${id}`);
+
+    if (!id) {
+        return res.status(400).send('ID-ul utilizatorului este necesar!');
+    }
+    try {
+        const jsonData = await fs.promises.readFile('./db/userData.json', 'utf8');
+        const data = JSON.parse(jsonData);
+
+        const user = data.users.find(u => u.id === id);
+
+        if (!user) {
+            return res.status(404).send('Utilizatorul nu a fost găsit!');
+        }
+
+        const payCheck = user.payChecks.find(pay => pay.month === month);
+
+        if (!payCheck) {
+            return res.status(404).send('Paycheck-ul pentru luna specificată nu a fost găsit!');
+        }
+
+        const htmlContent = getFlyerCopy(
+            user.name,
+            user.team,
+            user.id,
+            payCheck.salaryMonth,
+            payCheck.totalWorkingDay,
+            payCheck.finalNetIncome,
+            payCheck.grossSalary,
+            payCheck.netIncome,
+            payCheck.meal
+        );
+
+        res.setHeader('Content-Type', 'text/html');
+        res.send(htmlContent);
+    } catch (error) {
+        console.error('Eroare la generarea flyer-ului:', error);
+        res.status(500).send('Eroare server!');
+    }
 });
 
 app.get('/api/get-month-data', (req, res) => {

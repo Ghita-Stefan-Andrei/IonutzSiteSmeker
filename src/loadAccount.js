@@ -8,6 +8,8 @@ async function loadAccount(id)
 
         const data = await response.json();
 
+        let ID = data.id
+
         document.querySelector('.logInfoName').textContent = data.name;
         document.querySelector('.logInfoMail').textContent = data.email;
         document.querySelectorAll('.teamInfoElement')[0].textContent = data.manager; 
@@ -15,4 +17,5 @@ async function loadAccount(id)
     } catch (error) {
         console.error('Eroare la actualizarea informațiilor utilizatorului:', error);
     }
+    return ID;
 }
