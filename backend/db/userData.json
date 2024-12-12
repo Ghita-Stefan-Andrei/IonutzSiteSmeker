@@ -79,7 +79,7 @@
                         8,
                         8
                     ],
-                    "leave": []
+                    "leave": [2, 3, 9, 10]
                 },
                 {
                     "month": "Octombrie",
