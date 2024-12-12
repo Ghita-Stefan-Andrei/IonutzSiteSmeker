@@ -1,6 +1,13 @@
 const fs = require('fs');
 
-function addNewUserToFile(name, email, manager, team) {
+function generateEmail(name) {
+    const names = name.split(' ');
+    const firstName = names[1].toLowerCase();
+    const lastName = names[0].toLowerCase();
+    return `${firstName}.${lastName}@dezzinex.com`;
+}
+
+function addNewUserToFile(name, manager, team) {
     const filePath = './db/userData.json'; // Asigură-te că acesta este calea corectă către fișierul tău JSON.
 
     // Citește fișierul JSON
@@ -10,6 +17,8 @@ function addNewUserToFile(name, email, manager, team) {
     // Găsește ultimul ID și calculează ID-ul nou
     const lastUser = userData.users[userData.users.length - 1];
     const newId = (parseInt(lastUser.id) + 1).toString().padStart(8, '0');
+
+    const email = generateEmail(name);
 
     // Creează un nou utilizator
     const newUser = {
@@ -68,14 +77,19 @@ function addPayCheckToUser(id, month, salaryMonth, totalWorkingDay, finalNetInco
     console.log(`Paycheck-ul pentru luna ${month} a fost adăugat utilizatorului cu ID-ul ${id}.`);
 }
 
+
+
+//addNewUserToFile("Popescu ion", "IonPopescu", "Paznic")
+
+
 addPayCheckToUser("00000001", 
-    "Februarie", 
+    "Septembrie", 
     "9", 
     "8", 
     "7", 
     "6", 
     "5", 
     "4",
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
-    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
-    []);
+    [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4], 
+    [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4], 
+    [3,4,5,14,15,16]);
