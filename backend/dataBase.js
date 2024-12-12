@@ -30,7 +30,7 @@ function addNewUserToFile(name, email, manager, team) {
     console.log(`Utilizatorul cu ID-ul ${newId} a fost adăugat cu succes.`);
 }
 
-function addPayCheckToUser(id, month, salaryMonth, totalWorkingDay, finalNetIncome, grossSalary, netIncome, meal) {
+function addPayCheckToUser(id, month, salaryMonth, totalWorkingDay, finalNetIncome, grossSalary, netIncome, meal, workedR, workedO, leave) {
     const filePath = './db/userData.json'; // Calea către fișierul JSON.
 
     // Citește fișierul JSON
@@ -53,7 +53,10 @@ function addPayCheckToUser(id, month, salaryMonth, totalWorkingDay, finalNetInco
         finalNetIncome: finalNetIncome,
         grossSalary: grossSalary,
         netIncome: netIncome,
-        meal: meal
+        meal: meal,
+        workedR: workedR,
+        workedO: workedO,
+        leave:leave
     };
 
     // Adaugă noul paycheck la vectorul utilizatorului
@@ -65,4 +68,14 @@ function addPayCheckToUser(id, month, salaryMonth, totalWorkingDay, finalNetInco
     console.log(`Paycheck-ul pentru luna ${month} a fost adăugat utilizatorului cu ID-ul ${id}.`);
 }
 
-addPayCheckToUser("00000011", "Decembrie", "9", "8", "7", "6", "5", "4");
+addPayCheckToUser("00000001", 
+    "Februarie", 
+    "9", 
+    "8", 
+    "7", 
+    "6", 
+    "5", 
+    "4",
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+    [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+    []);

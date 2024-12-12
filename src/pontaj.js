@@ -1,8 +1,9 @@
-function pontaj() {
+function pontaj(ID) {
     document.querySelector('.pontaj').addEventListener('click', async () => {
         const targetMonth = getCurrentMonthInRomanian();
         const months = ['Septembrie', 'Octombrie', 'Noiembrie', 'Decembrie', 'Ianuarie', 'Februarie'];
         const table = [];
+        const pontaj = [];
         
         document.querySelector('.content').innerHTML = getPontaj();
         document.querySelector('.month').innerHTML = targetMonth;
@@ -25,6 +26,26 @@ function pontaj() {
             } catch (error) {
                 console.error('Eroare la obținerea datelor:', error);
                 table.push('<p>Eroare la încărcarea datelor!</p>'); 
+            }
+
+            try {
+                const response = await fetch(`http://localhost:3000/api/get-timesheet-data?id=${ID}&month=${month}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+        
+                if (!response.ok) {
+                    throw new Error('Network response was not ok' + response.statusText);
+                }
+        
+                const data = await response.json();
+
+                pontaj.push(data);
+
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
             }
         }
 
@@ -64,6 +85,7 @@ function pontaj() {
                         input.disabled = false; 
                     }
                 });
+
             }
         });
 

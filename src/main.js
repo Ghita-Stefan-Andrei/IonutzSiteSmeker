@@ -19,9 +19,9 @@ function getRandomUserId() {
     return randomNumber.toString().padStart(8, '0'); 
 }
 
-userId = getRandomUserId()
+userId = "00000001";//getRandomUserId()
 
 loadAccount(userId);
 
 fluturas(userId)
-pontaj()
+pontaj(userId)

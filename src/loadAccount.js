@@ -17,5 +17,4 @@ async function loadAccount(id)
     } catch (error) {
         console.error('Eroare la actualizarea informațiilor utilizatorului:', error);
     }
-    return ID;
 }
