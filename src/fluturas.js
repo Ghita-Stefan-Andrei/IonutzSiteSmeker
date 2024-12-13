@@ -1,5 +1,4 @@
-function fluturas(ID)
-{
+function fluturas(ID) {
     document.querySelector('.fluturas').addEventListener('click', async () => {
         try {
             const response = await fetch('http://localhost:3000/api/data');
@@ -11,6 +10,9 @@ function fluturas(ID)
             const downloadButtons = document.querySelectorAll('.download');
             downloadButtons.forEach(button => {
                 button.addEventListener('click', async (e) => {
+                    if (button.disabled) return; 
+                    button.disabled = true; 
+
                     const month = e.target.getAttribute('data-month');
                     const year = e.target.getAttribute('data-year');
 
@@ -31,6 +33,8 @@ function fluturas(ID)
 
                     } catch (err) {
                         console.error('Eroare la descărcarea flyer-ului:', err);
+                    } finally {
+                        button.disabled = false; 
                     }
                 });
             });

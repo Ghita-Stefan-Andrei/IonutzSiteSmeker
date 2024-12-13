@@ -28,7 +28,6 @@ function recalculateTotals() {
     }
 }
 
-
 function populateRows(workedR, workedO, leave) {
     leave.forEach((colIndex) => {
         const cell = document.querySelector(`.row-4-col-${colIndex}`);
@@ -53,3 +52,41 @@ function populateRows(workedR, workedO, leave) {
         }
     });
 }
+
+function getMonthDetails(year, month) {
+    const daysInMonth = new Date(year, month, 0).getDate(); // Obține numărul de zile în lună
+    const weekends = [];
+    const weekdays = [];
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const date = new Date(year, month - 1, day);
+        const dayOfWeek = date.getDay(); // 0 = Duminică, 6 = Sâmbătă
+
+        if (dayOfWeek === 0 || dayOfWeek === 6) {
+            weekends.push(day);
+        } else {
+            weekdays.push(day);
+        }
+    }
+
+    return {
+        daysInMonth,
+        weekends,
+        weekdays
+    };
+}
+
+const luni = {
+    "Ianuarie": 1,
+    "Februarie": 2,
+    "Martie": 3,
+    "Aprilie": 4,
+    "Mai": 5,
+    "Iunie": 6,
+    "Iulie": 7,
+    "August": 8,
+    "Septembrie": 9,
+    "Octombrie": 10,
+    "Noiembrie": 11,
+    "Decembrie": 12
+  };

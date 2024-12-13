@@ -64,6 +64,69 @@ function pontaj(ID) {
                 downloadButton.style.display = 'none';  
             }
         };
+        
+        document.querySelector('.submite').addEventListener('click', () => {
+            const row1Values = [];
+            const row2Values = [];
+            const row3Values = [];
+
+            let dataAboutMonth = getMonthDetails(2024, luni[targetMonth]);
+            
+            for (let col = 1; col <= dataAboutMonth.daysInMonth; col++) {
+
+                const inputRow1 = document.querySelector(`.row-1-col-${col} input`);
+                if (inputRow1) {
+                    row1Values.push(parseFloat(inputRow1.value) || 0);
+                } else {
+                    const freeDayRow1 = document.querySelector(`.row-1-col-${col}.freeDay`);
+                    row1Values.push(freeDayRow1 ? -1 : 0); 
+                }
+            
+                const inputRow2 = document.querySelector(`.row-2-col-${col} input`);
+                if (inputRow2) {
+                    row2Values.push(parseFloat(inputRow2.value) || 0);
+                } else {
+                    const freeDayRow2 = document.querySelector(`.row-2-col-${col}.freeDay`);
+                    row2Values.push(freeDayRow2 ? -1 : 0); 
+                }
+
+                const totalCell = document.querySelector(`.row-3-col-${col}`);
+                if (totalCell) {
+                    const totalValue = parseFloat(totalCell.textContent) || 0;
+                    row3Values.push(totalValue);
+                }
+            }
+        
+            if (row3Values.includes(0)) {
+                alert('Trebuie completate toate celulele din row-3!');
+                return;  
+            }
+
+            const dataToSend = {
+                id: ID,
+                month: targetMonth,
+                row1: row1Values,
+                row2: row2Values,
+            };
+        
+            fetch('http://localhost:3000/api/submit-timesheet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(dataToSend),
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Eroare la trimiterea datelor!');
+                return response.text();
+            })
+            .then(data => {
+                //console.log('Datele au fost trimise cu succes!', data);
+            })
+            .catch(error => {
+                console.error('A apărut o eroare:', error);
+            });
+        });
 
         toggleDownloadButton(targetMonth); 
 
@@ -120,4 +183,5 @@ function pontaj(ID) {
             }
         });
     });
+    
 }

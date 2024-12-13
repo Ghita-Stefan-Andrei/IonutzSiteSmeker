@@ -25,3 +25,5 @@ loadAccount(userId);
 
 fluturas(userId)
 pontaj(userId)
+const details = getMonthDetails(2024, 11); 
+//console.log(details);

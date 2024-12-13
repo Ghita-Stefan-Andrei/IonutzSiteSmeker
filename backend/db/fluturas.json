@@ -1,4 +1,18 @@
 {
-    "month": ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"],
-    "year": [2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024, 2024]
+    "month": [
+        "Septembrie",
+        "Octombrie",
+        "Noiembrie",
+        "Decembrie",
+        "Ianuarie",
+        "Februarie"
+    ],
+    "year": [
+        2024,
+        2024,
+        2024,
+        2024,
+        2025,
+        2025
+    ]
 }
