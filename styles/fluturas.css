@@ -1,5 +1,6 @@
-.tableHolder{
-    background-color: white;
+.tableHolder {
+    background-color: #2c2c2c; /* Echivalent întunecat pentru alb */
+    color: white; /* Text alb */
     width: 75%;
     border-radius: 40px;
     margin-left: 1.6em;
@@ -8,51 +9,54 @@
     padding-right: 2.15em;
     padding-top: 1.35em;
     padding-bottom: 1.35em;
-    box-shadow: 1px 2px 2px 1px rgba(62, 50, 60, 0.17);
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.3); /* Întunecat */
 }
 
-.tableHead{
-    background-color: #75d3b4;
+.tableHead {
+    background-color: #4a8d76; /* Echivalent întunecat pentru #75d3b4 */
+    color: white; /* Text alb */
 }
 
 .tableHolder table {
     width: 100%;
     border-collapse: collapse;
-    text-align: center; /* Centrează textul pe orizontală */
+    text-align: center;
+    color: white; /* Text alb */
 }
 
 .tableHolder td {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    border: 1px solid #b9b9b9;
+    border: 1px solid #4d4d4d; /* Întunecat pentru #b9b9b9 */
     padding: 8px;
     width: 33%;
-    text-align: center; 
-    vertical-align: middle; 
-    
+    text-align: center;
+    vertical-align: middle;
+    color: white; /* Text alb */
 }
 
-.tableHead td{
+.tableHead td {
     font-weight: bold;
+    color: white; /* Text alb */
 }
 
-.download{
-    background-color: hsl(160, 52%, 71%);
+.download {
+    background-color: #2a6655; /* Echivalent întunecat pentru hsl(160, 52%, 71%) */
     border-radius: 47px;
     color: white;
     font-family: 'Poppins', sans-serif;
     padding-top: 0.25em;
     padding-bottom: 0.25em;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 0.5em; 
-    margin-top: 0.1.7em;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1.7em; /* Corectare */
     cursor: pointer;
-    width:10em;
+    width: 10em;
     margin: auto;
 }
 
-.download:hover{
-    background: linear-gradient(to right, #0625CA, #1E93A6);
+.download:hover {
+    background: linear-gradient(to right, #0625CA, #1E93A6); /* Păstrat */
 }

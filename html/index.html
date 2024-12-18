@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role</title>
+    <link rel="stylesheet" href="/styles/roleSelect.css?v=1.0">
+</head>
+<body>
+    <div class = "holder">
+        <button onclick="redirectWithID('00000001', 'employee')">Accesează ca Androne Ionut</button>
+        <button onclick="redirectWithID('00000002', 'employee')">Accesează ca Negrei Ana</button>
+        <button onclick="redirectWithID('00000003', 'employee')">Accesează ca Simion Andrei Paul</button>
+        <button onclick="redirectWithID('00000004', 'employee')">Accesează ca Stefan Ioana</button>
+        <button onclick="redirectWithID('00000005', 'employee')">Accesează ca Boicescu Mihaela Elena</button>
+        <button onclick="redirectWithID('00000006', 'manager')">Accesează ca Manager</button>
+    </div>
+
+    <script>
+        function redirectWithID(id, type) {
+            window.location.href = `dashboard.html?id=${id}&type=${type}`;
+        }
+    </script>
+</body>
+</html>

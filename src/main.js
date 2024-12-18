@@ -16,6 +16,7 @@ document.querySelector('.cereri').addEventListener('click', () => {
 
 const urlParams = new URLSearchParams(window.location.search);
 let userId = urlParams.get('id');
+let userType = urlParams.get('type');
 
 loadAccount(userId);
 

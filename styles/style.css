@@ -5,30 +5,32 @@
 }
 
 body {
-    background-color: #fbfbfd;
-    display: flex; 
-    height: 100vh; 
+    background-color: #1a1a1a; /* Fundal întunecat */
+    color: white; /* Text alb implicit */
+    display: flex;
+    height: 100vh;
 }
 
-.nav{
-    background-color: #FFFFFF;
-    width: 314px; 
-    height: 100%; 
+.nav {
+    background-color: #2c2c2c; /* Fundal întunecat pentru navigație */
+    width: 314px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.navLine{
-    height: 1px; 
-    border: none; 
-    background-color: #E7E7E7;
+.navLine {
+    height: 1px;
+    border: none;
+    background-color: #4d4d4d; /* Linie mai închisă */
 }
 
 .content {
-    flex-grow: 1; 
-    background-color: #fbfbfd; 
+    flex-grow: 1;
+    background-color: #1a1a1a; /* Fundal întunecat pentru conținut */
+    color: white; /* Text alb */
 }
 
 .logInfo img {
@@ -38,66 +40,68 @@ body {
 
 .logInfo p {
     margin-left: 14px;
-    color: #637381;
+    color: #c4c4c4; /* Gri deschis */
     font-family: 'Inter', sans-serif;
 }
 
-.logInfoName{
+.logInfoName {
     font-weight: 500;
     font-size: 16px;
 }
 
-.logInfoMail{
+.logInfoMail {
     font-weight: 400;
     font-size: 14px;
 }
 
 .logInfo {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-top: 2em;
     margin-bottom: 26px;
 }
 
-.teamInfo{
-    background-color: #FBFBFB;
+.teamInfo {
+    background-color: #1f1f1f; /* Fundal întunecat pentru casetă */
     border-radius: 16px;
     padding-top: 0.55em;
     padding-left: 0.6em;
     padding-bottom: 0.55em;
-    box-shadow: 0px 2px 2px 0px rgba(62, 50, 60, 0.17);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3); /* Umbra adaptată */
     width: 262px;
+    color: white; /* Text alb */
 }
 
-.teamInfo p{
+.teamInfo p {
     font-family: 'Play', sans-serif;
-    color: #303354
+    color: white; /* Text alb */
 }
 
-.teamInfoTitle{
+.teamInfoTitle {
     font-weight: 700;
     font-size: 16px;
     margin-bottom: 0.7em;
 }
 
-.teamInfoElement{
+.teamInfoElement {
     font-weight: 400;
     font-size: 16px;
 }
 
-.teamInfo2{
+.teamInfo2 {
     margin-top: 17px;
 }
 
 .navList {
-    list-style-type: none; 
-    padding: 0; 
+    list-style-type: none;
+    padding: 0;
     margin-top: 19px;
 }
 
 .navList li {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
+    color: white; /* Text alb */
 }
 
 .navList li img {
@@ -106,7 +110,7 @@ body {
     margin-right: 0.5em;
 }
 
-.navList li{
+.navList li {
     margin-top: 15px;
     padding: 0.35em;
     padding-right: 1.4em;
@@ -126,7 +130,7 @@ body {
 }
 
 .navList li:hover {
-    background-color: hsl(0, 0%, 85%);
+    background-color: #3a3a3a; /* Fundal întunecat la hover */
     border-radius: 16px;
 }
 
@@ -134,9 +138,9 @@ body {
     outline: none;
 }
 
-.contentTitle{
+.contentTitle {
     font-family: 'Play', sans-serif;
-    color: black;
+    color: white; /* Text alb */
     font-size: 40px;
     margin-top: 0.8em;
     margin-left: 0.8em;
