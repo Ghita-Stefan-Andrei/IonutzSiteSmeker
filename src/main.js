@@ -14,16 +14,11 @@ document.querySelector('.cereri').addEventListener('click', () => {
     document.querySelector('.content').innerHTML = getCereri();
 });
 
-function getRandomUserId() {
-    const randomNumber = Math.floor(Math.random() * 10) + 1; 
-    return randomNumber.toString().padStart(8, '0'); 
-}
-
-userId = "00000001";//getRandomUserId()
+const urlParams = new URLSearchParams(window.location.search);
+let userId = urlParams.get('id');
 
 loadAccount(userId);
 
 fluturas(userId)
 pontaj(userId)
 const details = getMonthDetails(2024, 11); 
-//console.log(details);

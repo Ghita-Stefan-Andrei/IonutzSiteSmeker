@@ -5,8 +5,6 @@ const { getFlyerCopy } = require('./flyer');
 const { getTable } = require('./calendar');
 const app = express();
 
-
-
 app.use(cors());
 
 app.get('/api/data', (req, res) => {
