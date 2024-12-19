@@ -3,6 +3,8 @@ const cors = require('cors');
 const fs = require('fs');
 const { getFlyerCopy } = require('./flyer');
 const { getTable } = require('./calendar');
+const { generateDateRange } = require('./getDatesArray');
+
 const app = express();
 
 app.use(cors());
@@ -240,7 +242,7 @@ app.post('/api/submit-timesheet', express.json(), (req, res) => {
 app.get('/api/user-data-with-requests', (req, res) => {
     const userId = req.query.id;
 
-    console.log(userId);
+    console.log('Cerere concediu');
 
     fs.readFile('./db/userData.json', 'utf8', (err, userData) => {
         if (err) {
@@ -275,6 +277,59 @@ app.get('/api/user-data-with-requests', (req, res) => {
     });
 });
 
+app.post('/api/submit-request', express.json(), (req, res) => {
+    const { ID, startDate, endDate, differenceInDays, selectedOption, mailReplacer, telefonUrgenta } = req.body;
+
+    if (!startDate || !endDate || !selectedOption || !mailReplacer || !telefonUrgenta || !ID) {
+        return res.status(400).send('Datele trimise sunt incomplete!');
+    }
+
+    const dateRange = generateDateRange(startDate, endDate);
+    const status = "pending";
+
+    const responseJson = {
+        ID,
+        startDate,
+        endDate,
+        differenceInDays,
+        selectedOption,
+        mailReplacer,
+        telefonUrgenta,
+        dateRange,
+        status
+    };
+
+    fs.readFile('./db/offDaysQueue.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului:', err);
+            return res.status(500).send('Eroare server!');
+        }
+
+        const jsonData = JSON.parse(data);
+
+        const userRequest = jsonData.requests.find(request => request.id === ID);
+
+        if (userRequest) {
+            userRequest.req.push(responseJson);
+        } else {
+            jsonData.requests.push({
+                id: ID,
+                req: [responseJson]
+            });
+        }
+
+        fs.writeFile('./db/offDaysQueue.json', JSON.stringify(jsonData, null, 4), 'utf8', (writeErr) => {
+            if (writeErr) {
+                console.error('Eroare la scrierea fișierului:', writeErr);
+                return res.status(500).send('Eroare server!');
+            }
+
+            console.log('Cererea a fost adăugată cu succes!');
+        });
+    });
+
+    res.send('Cererea a fost primită cu succes!');
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {

@@ -24,33 +24,77 @@ function cereri(ID)
         document.querySelector('.medicalDisplay').textContent = offDays[1] || 0;
         document.querySelector('.cereriDisplay').textContent = requestsCount;
     
-        document.querySelector('.trimiteConcediu').addEventListener('click', () => {
-            console.log('Buna');
-
+        document.querySelector('.trimiteConcediu').addEventListener('click', async () => {
             const startDate = document.querySelector('#startDatePicker').value;
             const endDate = document.querySelector('#endDatePicker').value;
+            const concediuSelect = document.getElementById('concediuSelector');
+            let mailReplacer = document.querySelector('.mr1').value;
+            let telefonUrgenta = document.querySelector('.mr2').value;
 
-            if (startDate && endDate) {
-                console.log(`Data de început: ${startDate}`);
-                console.log(`Data de sfârșit: ${endDate}`);
-            } else {
-                alert("Te rugam selecteaza date pt inceputul si sfarsitul concediului");
+            const startDateConverted = new Date(startDate);
+            const endDateConverted = new Date(endDate);
+
+            const differenceInTime = endDateConverted - startDateConverted;
+            const differenceInDays = differenceInTime / (1000 * 3600 * 24) + 1;
+            
+            const selectedOption = concediuSelect.value;
+
+            const dayToCompare = (selectedOption === "medical") ? 1:0;
+
+            if (!selectedOption) {
+                alert('Te rugăm să selectezi un tip de concediu înainte de a trimite cererea.');
                 return;
             }
 
-            const startDate2 = new Date(startDate);
-            const endDate2 = new Date(endDate);
+            if (!(startDate && endDate)) {
+                alert("Te rugam selecteaza date pt inceputul si sfarsitul concediului");
+                return;
+            } 
 
-            const differenceInTime = endDate2 - startDate2;
-            const differenceInDays = differenceInTime / (1000 * 3600 * 24) + 1;
-
-            if (differenceInDays > offDays[0]) //TODO modifica indexu in functie de tipu cererii
-            {
+            if (differenceInDays > offDays[dayToCompare]){
                 alert("Nu aveti atatea zile de concediu disponibile");
                 return;
             }
 
-            console.log(differenceInDays);
+            if (requestsCount){
+                alert("Prea multe cereri in asteptare!");
+                return;
+            }
+
+            if (mailReplacer === '')
+                mailReplacer = 'Lipsa'
+
+            if (telefonUrgenta === '')
+                telefonUrgenta = 'Lipsa'
+
+            const data = {
+                ID,
+                startDate,
+                endDate,
+                differenceInDays,
+                selectedOption,
+                mailReplacer,
+                telefonUrgenta
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/api/submit-request', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+        
+                if (!response.ok) {
+                    throw new Error('Eroare la trimiterea cererii');
+                }
+        
+                const message = await response.text(); 
+                console.log('Răspuns backend:', message);
+            } catch (error) {
+                console.error('Eroare:', error);
+            }
         });
     });
 

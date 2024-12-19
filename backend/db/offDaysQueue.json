@@ -1,13 +1,44 @@
 {
-    "requests":[
+    "requests": [
         {
-            "id":"00000001",
-            "req":[
+            "id": "00000001",
+            "req": [
                 {
-                    "details":
-                    {
-
-                    }
+                    "ID": "00000001",
+                    "startDate": "2024-11-30",
+                    "endDate": "2024-12-03",
+                    "differenceInDays": 4,
+                    "selectedOption": "odihna",
+                    "mailReplacer": "Lipsa",
+                    "telefonUrgenta": "Lipsa",
+                    "dateRange": [
+                        "2024-11-30",
+                        "2024-12-01",
+                        "2024-12-02",
+                        "2024-12-03"
+                    ],
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "id": "00000002",
+            "req": [
+                {
+                    "ID": "00000002",
+                    "startDate": "2024-12-01",
+                    "endDate": "2024-12-04",
+                    "differenceInDays": 4,
+                    "selectedOption": "medical",
+                    "mailReplacer": "Lipsa",
+                    "telefonUrgenta": "Lipsa",
+                    "dateRange": [
+                        "2024-12-01",
+                        "2024-12-02",
+                        "2024-12-03",
+                        "2024-12-04"
+                    ],
+                    "status": "pending"
                 }
             ]
         }

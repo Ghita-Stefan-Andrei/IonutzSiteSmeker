@@ -1,0 +1,88 @@
+.requestList {
+    background-color: #1a1a1a; 
+    border: 0.5em solid #2c2c2c; 
+    border-radius: 2em;          
+    width: 95%;                   
+    height: auto;                  
+    margin: auto;                
+    box-sizing: border-box; 
+    box-shadow: 1px 2px 2px 1px rgba(62, 50, 60, 0.17);   
+    margin-top: 6.5%;
+    padding: 1em;
+    font-family: 'Inter', sans-serif;
+    color: white;
+
+    display: flex;              
+    flex-direction: column;
+    gap: 1em;  
+}
+
+.requestTitle{
+    background-color: #2c2c2c;
+    border-radius: 1em;
+    height: 3em;
+    padding: 1em;
+    padding-top: 0.9em;
+    color: rgb(214, 214, 214);
+
+    display: flex;                     
+    justify-content: space-between;    
+    align-items: center; 
+}
+
+.requestTitle span {
+    width: 18%;                          
+    text-align: center;                 
+}
+
+.reqestElement{
+    height: 3em;
+    padding: 1em;
+    padding-top: 0.9em;
+    color: rgb(214, 214, 214);
+    border-bottom: #2c2c2c 1px solid;
+
+    display: flex;                     
+    justify-content: space-between;    
+    align-items: center; 
+}
+
+.reqestElement:hover{
+    background-color: #2c2c2c;
+    border-radius: 1em;
+}
+
+.reqestElement span {
+    width: 18%;                          
+    text-align: center;                 
+}
+
+.sWrapper{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.wrapperStatus{
+    height: 2em;
+    border-radius: 0.75em;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 50%; 
+}
+
+.accept div{
+    color: lightgreen;
+    background-color: rgb(0, 128, 0, 0.2);
+}
+
+.astept div{
+    color: lightsalmon;
+    background-color: rgb(255, 165, 0, 0.2);
+}
+
+.refuz div{
+    color: red;
+    background-color: rgb(255, 0, 0, 0.2);
+}

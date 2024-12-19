@@ -51,12 +51,12 @@ function getCereri()
             <div class = "bolderElement">
                 <div class = "vacationSelector">
                     <h1>Mail inlocuitor:</h1>
-                    <input class = "mailReplacer" type="text" placeholder="example@dezzinex.com">
+                    <input class = "mailReplacer mr1" type="text" placeholder="example@dezzinex.com">
                 </div>
 
                 <div class = "vacationSelector">
                     <h1>Telefon urgenta:</h1>
-                    <input class = "mailReplacer" type="text" placeholder="07 n-am cartela">
+                    <input class = "mailReplacer mr2" type="text" placeholder="07 n-am cartela">
                 </div>
             </div>
 
@@ -67,9 +67,9 @@ function getCereri()
                     <h1>Tip de concediu:</h1>
                     <select id = "concediuSelector" class = "dropdown dd2">
                         <option value="" disabled selected>Alege tipul de concediu</option>
-                        <option value="optiunea1">Concediu maternal</option>
-                        <option value="optiunea2">Concediu medical</option>
-                        <option value="optiunea3">Concediu de odihna</option>
+                        <option value="maternal">Concediu maternal</option>
+                        <option value="medical">Concediu medical</option>
+                        <option value="odihna">Concediu de odihna</option>
                     </select>
                 </div>
 
