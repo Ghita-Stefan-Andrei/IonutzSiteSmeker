@@ -6,6 +6,7 @@
             "email": "ionut.androne@dezzinex.com",
             "manager": "Mihai Lorena",
             "team": "LNS",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",
@@ -363,6 +364,7 @@
             "email": "ana.negrei@dezzinex.com",
             "manager": "Mihai Lorena",
             "team": "LNS",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",
@@ -444,6 +446,7 @@
             "email": "andrei.simion@dezzinex.com",
             "manager": "Mihai Lorena",
             "team": "LNS",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",
@@ -525,6 +528,7 @@
             "email": "ioana.stefan@dezzinex.com",
             "manager": "Mihai Lorena",
             "team": "LNS",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",
@@ -606,6 +610,7 @@
             "email": "mihaela.boicescu@dezzinex.com",
             "manager": "Mihai Lorena",
             "team": "LNS",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",
@@ -687,6 +692,7 @@
             "email": "lorena.mihai@dezzinex.com",
             "manager": "Ghita Stefan Andrei",
             "team": "LNS - Manager",
+            "offDays" : [21, 5],
             "payChecks": [
                 {
                     "month": "Septembrie",

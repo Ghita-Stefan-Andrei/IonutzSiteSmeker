@@ -31,6 +31,7 @@ body {
     flex-grow: 1;
     background-color: #1a1a1a; /* Fundal întunecat pentru conținut */
     color: white; /* Text alb */
+    font-size: 16px;
 }
 
 .logInfo img {
@@ -144,4 +145,13 @@ body {
     font-size: 40px;
     margin-top: 0.8em;
     margin-left: 0.8em;
+}
+
+.dropdown{
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 16px;
+    padding: 0.5em;
+    -webkit-appearance: none;
+    width: auto;
 }

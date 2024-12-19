@@ -237,6 +237,45 @@ app.post('/api/submit-timesheet', express.json(), (req, res) => {
     }
 });
 
+app.get('/api/user-data-with-requests', (req, res) => {
+    const userId = req.query.id;
+
+    console.log(userId);
+
+    fs.readFile('./db/userData.json', 'utf8', (err, userData) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului userData.json:', err);
+            return res.status(500).send('Eroare server!');
+        }
+
+        const userDataParsed = JSON.parse(userData);
+        const user = userDataParsed.users.find(u => u.id === userId);
+
+        if (!user) {
+            return res.status(404).send('Utilizatorul nu a fost găsit!');
+        }
+
+        fs.readFile('./db/offDaysQueue.json', 'utf8', (err, requestsData) => {
+            if (err) {
+                console.error('Eroare la citirea fișierului offDaysQueue.json:', err);
+                return res.status(500).send('Eroare server!');
+            }
+
+            const requestsParsed = JSON.parse(requestsData);
+
+            const userRequests = requestsParsed.requests.find(request => request.id === userId);
+
+            const requestsCount = userRequests ? userRequests.req.length : 0;
+
+            res.json({
+                offDays: user.offDays || [],
+                requestsCount: requestsCount
+            });
+        });
+    });
+});
+
+
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

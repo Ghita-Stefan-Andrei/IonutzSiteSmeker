@@ -13,17 +13,10 @@ function getRapoarte()
 }
 
 
-
 function getConcedii()
 {
     let content = `${getTitle('Concedii ce necesita aprobare')}`
-
+    
     return content
 }
 
-function getCereri()
-{
-    let content = `${getTitle('Cerere noua de concediu')}`
-
-    return content
-}

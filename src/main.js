@@ -10,9 +10,7 @@ document.querySelector('.rapoarte').addEventListener('click', () => {
     document.querySelector('.content').innerHTML = getRapoarte();
 });
 
-document.querySelector('.cereri').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = getCereri();
-});
+
 
 const urlParams = new URLSearchParams(window.location.search);
 let userId = urlParams.get('id');
@@ -20,6 +18,7 @@ let userType = urlParams.get('type');
 
 loadAccount(userId);
 
-fluturas(userId)
-pontaj(userId)
+fluturas(userId);
+pontaj(userId);
+cereri(userId);
 const details = getMonthDetails(2024, 11); 

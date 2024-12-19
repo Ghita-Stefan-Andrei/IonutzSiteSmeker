@@ -5,7 +5,7 @@ function getPontaj()
     content += `<div class = "holder">
             <div class = "tableHolderHeader">
                 <h2 class = "month"></h2>
-                <select id = "monthSelector">
+                <select id = "monthSelector" class = "dropdown">
                     <option value="" disabled selected>Alege o lună</option>
                 </select>
             </div>
