@@ -31,7 +31,7 @@
 }
 
 .requestTitle span {
-    width: 18%;                          
+    width: 16.66%;                          
     text-align: center;                 
 }
 
@@ -53,7 +53,7 @@
 }
 
 .reqestElement span {
-    width: 18%;                          
+    width: 16.6%;                          
     text-align: center;                 
 }
 
@@ -85,4 +85,40 @@
 .refuz div{
     color: red;
     background-color: rgb(255, 0, 0, 0.2);
+}
+
+.btnHolder {
+    display: flex;
+    gap: 1em; /* Spațiu între butoane */
+    justify-content: center; /* Aliniază butoanele pe orizontală */
+    background: none;
+    border: none;
+    width: 16.66%;      
+}
+
+.btnHolder button {
+    width: 0.80em;
+    height: 0.80em;
+    border-radius: 50%; 
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.btnHolder button:nth-child(1) {
+    background-color: rgb(0, 128, 0, 0.5); 
+}
+
+.btnHolder button:nth-child(1):hover {
+    background-color: lightgreen; 
+    transform: scale(1.1); 
+}
+
+.btnHolder button:nth-child(2) {
+    background-color: rgb(255, 0, 0, 0.5); 
+}
+
+.btnHolder button:nth-child(2):hover {
+    background-color: red; 
+    transform: scale(1.1); 
 }

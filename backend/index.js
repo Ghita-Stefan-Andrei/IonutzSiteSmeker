@@ -278,9 +278,9 @@ app.get('/api/user-data-with-requests', (req, res) => {
 });
 
 app.post('/api/submit-request', express.json(), (req, res) => {
-    const { ID, startDate, endDate, differenceInDays, selectedOption, mailReplacer, telefonUrgenta } = req.body;
+    const { ID, requestID, startDate, endDate, differenceInDays, selectedOption, mailReplacer, telefonUrgenta } = req.body;
 
-    if (!startDate || !endDate || !selectedOption || !mailReplacer || !telefonUrgenta || !ID) {
+    if (!ID || !startDate || !endDate || !selectedOption || !mailReplacer || !telefonUrgenta || !requestID) {
         return res.status(400).send('Datele trimise sunt incomplete!');
     }
 
@@ -288,7 +288,7 @@ app.post('/api/submit-request', express.json(), (req, res) => {
     const status = "pending";
 
     const responseJson = {
-        ID,
+        requestID,
         startDate,
         endDate,
         differenceInDays,
@@ -298,6 +298,17 @@ app.post('/api/submit-request', express.json(), (req, res) => {
         dateRange,
         status
     };
+
+    let NAME = "";
+    fs.readFile('./db/userData.json', 'utf8', (err, userData) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului:', err);
+            return res.status(500).send('Eroare server!');
+        }
+        const userDataParsed = JSON.parse(userData);
+        const user = userDataParsed.users.find(u => u.id === ID);
+        NAME = user.name;
+    });
 
     fs.readFile('./db/offDaysQueue.json', 'utf8', (err, data) => {
         if (err) {
@@ -314,6 +325,7 @@ app.post('/api/submit-request', express.json(), (req, res) => {
         } else {
             jsonData.requests.push({
                 id: ID,
+                name: NAME,
                 req: [responseJson]
             });
         }
@@ -330,6 +342,20 @@ app.post('/api/submit-request', express.json(), (req, res) => {
 
     res.send('Cererea a fost primită cu succes!');
 });
+
+app.get('/api/get-requests', (req, res) => {
+    fs.readFile('./db/offDaysQueue.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului:', err);
+            return res.status(500).send('Eroare server!');
+        }
+
+        const jsonData = JSON.parse(data);
+
+        res.json(jsonData.requests || []);
+    });
+});
+
 
 const PORT = 3000;
 app.listen(PORT, () => {

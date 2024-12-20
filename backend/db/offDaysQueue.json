@@ -2,17 +2,17 @@
     "requests": [
         {
             "id": "00000001",
+            "name": "Androne Ionut",
             "req": [
                 {
-                    "ID": "00000001",
-                    "startDate": "2024-11-30",
+                    "requestID": "2024-12-012024-12-03",
+                    "startDate": "2024-12-01",
                     "endDate": "2024-12-03",
-                    "differenceInDays": 4,
+                    "differenceInDays": 3,
                     "selectedOption": "odihna",
                     "mailReplacer": "Lipsa",
                     "telefonUrgenta": "Lipsa",
                     "dateRange": [
-                        "2024-11-30",
                         "2024-12-01",
                         "2024-12-02",
                         "2024-12-03"
@@ -23,20 +23,19 @@
         },
         {
             "id": "00000002",
+            "name": "Negrei Ana",
             "req": [
                 {
-                    "ID": "00000002",
-                    "startDate": "2024-12-01",
-                    "endDate": "2024-12-04",
-                    "differenceInDays": 4,
-                    "selectedOption": "medical",
+                    "requestID": "2024-12-092024-12-10",
+                    "startDate": "2024-12-09",
+                    "endDate": "2024-12-10",
+                    "differenceInDays": 2,
+                    "selectedOption": "odihna",
                     "mailReplacer": "Lipsa",
                     "telefonUrgenta": "Lipsa",
                     "dateRange": [
-                        "2024-12-01",
-                        "2024-12-02",
-                        "2024-12-03",
-                        "2024-12-04"
+                        "2024-12-09",
+                        "2024-12-10"
                     ],
                     "status": "pending"
                 }

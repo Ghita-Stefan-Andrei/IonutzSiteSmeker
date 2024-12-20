@@ -67,8 +67,11 @@ function cereri(ID)
             if (telefonUrgenta === '')
                 telefonUrgenta = 'Lipsa'
 
+            const requestID = startDate + endDate;
+
             const data = {
                 ID,
+                requestID,
                 startDate,
                 endDate,
                 differenceInDays,

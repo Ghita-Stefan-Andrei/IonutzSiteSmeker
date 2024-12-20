@@ -2,7 +2,7 @@ function getFlyer(data)
 {
     let tableHTML = `
         ${getTitle('Descarca fluturas de salariu')}
-        <div class="tableHolder">
+        <div class="tableHolder bolder2">
             <table>
                 <tr class="tableHead">
                     <td>LUNA</td>
