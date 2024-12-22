@@ -1,45 +1,24 @@
 {
-    "requests": [
+  "requests": [
+    {
+      "id": "00000001",
+      "name": "Androne Ionut",
+      "req": [
         {
-            "id": "00000001",
-            "name": "Androne Ionut",
-            "req": [
-                {
-                    "requestID": "2024-12-012024-12-03",
-                    "startDate": "2024-12-01",
-                    "endDate": "2024-12-03",
-                    "differenceInDays": 3,
-                    "selectedOption": "odihna",
-                    "mailReplacer": "Lipsa",
-                    "telefonUrgenta": "Lipsa",
-                    "dateRange": [
-                        "2024-12-01",
-                        "2024-12-02",
-                        "2024-12-03"
-                    ],
-                    "status": "pending"
-                }
-            ]
-        },
-        {
-            "id": "00000002",
-            "name": "Negrei Ana",
-            "req": [
-                {
-                    "requestID": "2024-12-092024-12-10",
-                    "startDate": "2024-12-09",
-                    "endDate": "2024-12-10",
-                    "differenceInDays": 2,
-                    "selectedOption": "odihna",
-                    "mailReplacer": "Lipsa",
-                    "telefonUrgenta": "Lipsa",
-                    "dateRange": [
-                        "2024-12-09",
-                        "2024-12-10"
-                    ],
-                    "status": "pending"
-                }
-            ]
+          "requestID": "2024-12-012024-12-02",
+          "startDate": "2024-12-01",
+          "endDate": "2024-12-02",
+          "differenceInDays": 2,
+          "selectedOption": "odihna",
+          "mailReplacer": "Lipsa",
+          "telefonUrgenta": "Lipsa",
+          "dateRange": [
+            "2024-12-01",
+            "2024-12-02"
+          ],
+          "status": "approved"
         }
-    ]
+      ]
+    }
+  ]
 }

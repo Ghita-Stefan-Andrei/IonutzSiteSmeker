@@ -4,28 +4,28 @@ function getCereri()
     content += `<div class = "bolder">
             <div class = "holidayDisplayElement">
                 <h1 class = "dayDisplay normalDisplay">-</h1>
-                <img src = "/resources/vacationIcons/availableDays.png">
+                <img src = "../resources/vacationIcons/availableDays.png">
                 <h2 class = "elementTitle">Zile disponibile</h2>
                 <h3 class = "elementTitleSubText">pentru concedii de odihna</h3>
             </div>
             
             <div class = "holidayDisplayElement">
                 <h1 class = "dayDisplay medicalDisplay">-</h1>
-                <img src = "/resources/vacationIcons/buba.png">
+                <img src = "../resources/vacationIcons/buba.png">
                 <h2 class = "elementTitle">Zile disponibile</h2>
                 <h3 class = "elementTitleSubText">pentru concedii medicale</h3>
             </div>
 
             <div class = "holidayDisplayElement">
                 <h1 class = "dayDisplay cereriDisplay">-</h1>
-                <img src = "/resources/vacationIcons/pending.png">
+                <img src = "../resources/vacationIcons/pending.png">
                 <h2 class = "elementTitle">Cereri in asteptare</h2>
                 <h3 class = "elementTitleSubText">se asteapta decizia managerului</h3>
             </div>
 
             <div class = "holidayDisplayElement">
                 <h1 class = "dayDisplay">21</h1>
-                <img src = "/resources/vacationIcons/totalDays.png">
+                <img src = "../resources/vacationIcons/totalDays.png">
                 <h2 class = "elementTitle">Zile totale</h2>
                 <h3 class = "elementTitleSubText">per an</h3>
             </div>

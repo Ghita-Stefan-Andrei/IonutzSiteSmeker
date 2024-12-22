@@ -19,7 +19,7 @@ function getFlyer(data)
                 <td class = "downloadBtn">
                     <div class="download" data-month="${data.month[i]}" data-year="${data.year[i]}">
                         Descarca
-                        <img src="/resources/file_download.png" alt="Download Icon">
+                        <img src="../resources/file_download.png" alt="Download Icon">
                     </div>
                 </td>
             </tr>

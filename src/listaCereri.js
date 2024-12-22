@@ -26,6 +26,45 @@ function lista(ID){
         }
         
         document.querySelector('.content').innerHTML = getConcedii(data);
-    });
 
+        const buttons = document.querySelectorAll('.requestList button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                
+                const userId = button.getAttribute('data-user-id');
+                const requestId = button.getAttribute('data-request-id');
+                const action = button.getAttribute('data-action'); 
+            
+                const payload = {
+                    id: userId,
+                    requestID: requestId,
+                    status: action === 'accept' ? 'approved' : 'rejected'
+                };
+            
+                console.log("Buton apăsat");
+
+                fetch('http://localhost:3000/api/update-request-status', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Eroare la actualizarea cererii');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Răspuns server:', data);
+                    button.closest('.reqestElement').remove();
+                })
+                .catch(error => {
+                    console.error('Eroare la trimiterea cererii:', error);
+                });
+            });
+        });
+    });
 }

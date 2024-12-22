@@ -11,26 +11,31 @@ function getConcedii(data) {
         </div>`;
 
     data.forEach(request => {
-        
-        const angajat = request.name;  
-        const tipConcediu = request.req[0].selectedOption;  
-        const perioada = `${request.req[0].startDate} - ${request.req[0].endDate}`;
-        const durata = request.req[0].differenceInDays + " Zile";
+        const angajat = request.name;
 
-        content += `
-        <div class="reqestElement">
-            <span>${angajat}</span>
-            <span>${tipConcediu}</span>
-            <span>${perioada}</span>
-            <span>${durata}</span>
-            <span class="astept sWrapper"><div class="wrapperStatus">In Asteptare</div></span>  
-            <div class="btnHolder">
-                <button></button>
-                <button></button>
-            </div>
-        </div>`;
+        request.req.forEach(req => {
+            const tipConcediu = req.selectedOption;
+            const perioada = `${req.startDate} - ${req.endDate}`;
+            const durata = req.differenceInDays + " Zile";
+            const userId = request.id; 
+            const requestId = req.requestID; 
+
+            content += `
+            <div class="reqestElement">
+                <span>${angajat}</span>
+                <span>${tipConcediu}</span>
+                <span>${perioada}</span>
+                <span>${durata}</span>
+                <span class="astept sWrapper"><div class="wrapperStatus">In Asteptare</div></span>  
+                <div class="btnHolder">
+                    <button data-user-id="${userId}" data-request-id="${requestId}" data-action="accept"></button>
+                    <button data-user-id="${userId}" data-request-id="${requestId}" data-action="refuz"></button>
+                </div>
+            </div>`;
+        });
     });
 
-    content += `</div>`;  
+    content += `</div>`; 
+     
     return content;
 }

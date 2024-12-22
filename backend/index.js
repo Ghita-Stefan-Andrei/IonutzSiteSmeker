@@ -267,7 +267,9 @@ app.get('/api/user-data-with-requests', (req, res) => {
 
             const userRequests = requestsParsed.requests.find(request => request.id === userId);
 
-            const requestsCount = userRequests ? userRequests.req.length : 0;
+            const requestsCount = userRequests 
+            ? userRequests.req.filter(request => request.status === 'pending').length 
+            : 0;
 
             res.json({
                 offDays: user.offDays || [],
@@ -352,10 +354,62 @@ app.get('/api/get-requests', (req, res) => {
 
         const jsonData = JSON.parse(data);
 
-        res.json(jsonData.requests || []);
+        const pendingRequests = jsonData.requests
+            .map(request => ({
+                ...request,
+                req: request.req.filter(r => r.status === 'pending')
+            }))
+            .filter(request => request.req.length > 0);
+
+        res.json(pendingRequests || []);
     });
 });
 
+app.post('/api/update-request-status', express.json(), (req, res) => {
+    const { id, requestID, status } = req.body;
+
+    if (!id || !requestID || !status) {
+        return res.status(400).send('Date incomplete! ID, requestID și status sunt necesare.');
+    }
+
+    fs.readFile('./db/offDaysQueue.json', 'utf8', (err, data) => {
+        if (err) {
+            console.error('Eroare la citirea fișierului:', err);
+            return res.status(500).send('Eroare server!');
+        }
+
+        let jsonData;
+        try {
+            jsonData = JSON.parse(data);
+        } catch (parseError) {
+            console.error('Eroare la parsarea fișierului JSON:', parseError);
+            return res.status(500).send('Eroare la parsarea fișierului!');
+        }
+
+        const userRequest = jsonData.requests.find(request => request.id === id);
+
+        if (userRequest) {
+            const specificRequest = userRequest.req.find(req => req.requestID === requestID);
+
+            if (specificRequest) {
+                specificRequest.status = status;
+
+                fs.writeFile('./db/offDaysQueue.json', JSON.stringify(jsonData, null, 2), (writeErr) => {
+                    if (writeErr) {
+                        console.error('Eroare la salvarea fișierului:', writeErr);
+                        return res.status(500).send('Eroare la salvarea cererii!');
+                    }
+
+                    return res.json({ message: 'Status actualizat cu succes!' });
+                });
+            } else {
+                return res.status(404).send('Cerererea nu a fost găsită!');
+            }
+        } else {
+            return res.status(404).send('Utilizatorul nu a fost găsit!');
+        }
+    });
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
