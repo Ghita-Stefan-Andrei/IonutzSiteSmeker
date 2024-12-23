@@ -94,11 +94,11 @@ function cereri(ID)
                 }
         
                 const message = await response.text(); 
+                alert("Cererea a fost trimisa!");
                 console.log('Răspuns backend:', message);
             } catch (error) {
                 console.error('Eroare:', error);
             }
         });
     });
-
 }

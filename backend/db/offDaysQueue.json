@@ -1,8 +1,8 @@
 {
   "requests": [
     {
-      "id": "00000001",
-      "name": "Androne Ionut",
+      "id": "00000003",
+      "name": "Simion Andrei Paul",
       "req": [
         {
           "requestID": "2024-12-012024-12-02",
@@ -15,6 +15,59 @@
           "dateRange": [
             "2024-12-01",
             "2024-12-02"
+          ],
+          "status": "approved"
+        }
+      ]
+    },
+    {
+      "id": "00000001",
+      "name": "Androne Ionut",
+      "req": [
+        {
+          "requestID": "2024-12-012024-12-05",
+          "startDate": "2024-12-01",
+          "endDate": "2024-12-05",
+          "differenceInDays": 5,
+          "selectedOption": "odihna",
+          "mailReplacer": "Lipsa",
+          "telefonUrgenta": "Lipsa",
+          "dateRange": [
+            "2024-12-01",
+            "2024-12-02",
+            "2024-12-03",
+            "2024-12-04",
+            "2024-12-05"
+          ],
+          "status": "rejected"
+        },
+        {
+          "requestID": "2024-12-012024-12-18",
+          "startDate": "2024-12-01",
+          "endDate": "2024-12-18",
+          "differenceInDays": 18,
+          "selectedOption": "odihna",
+          "mailReplacer": "Lipsa",
+          "telefonUrgenta": "Lipsa",
+          "dateRange": [
+            "2024-12-01",
+            "2024-12-02",
+            "2024-12-03",
+            "2024-12-04",
+            "2024-12-05",
+            "2024-12-06",
+            "2024-12-07",
+            "2024-12-08",
+            "2024-12-09",
+            "2024-12-10",
+            "2024-12-11",
+            "2024-12-12",
+            "2024-12-13",
+            "2024-12-14",
+            "2024-12-15",
+            "2024-12-16",
+            "2024-12-17",
+            "2024-12-18"
           ],
           "status": "approved"
         }

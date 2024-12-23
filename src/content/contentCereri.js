@@ -36,13 +36,13 @@ function getCereri()
                 <div class = "vacationSelector">
                     <h1>De la:</h1>
                     <input class = "calendar" type="date" id="startDatePicker" name="datePicker" 
-                    min="2023-01-01" max="2024-12-31">
+                    min="2023-01-01" max="2025-12-31">
                 </div>
 
                 <div class = "vacationSelector">
                     <h1>Pana la:</h1>
                     <input class = "calendar" type="date" id="endDatePicker" name="datePicker" 
-                    min="2023-01-01" max="2024-12-31">
+                    min="2023-01-01" max="2025-12-31">
                 </div>
             </div>
 

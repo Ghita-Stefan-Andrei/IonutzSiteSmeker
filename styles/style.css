@@ -60,6 +60,7 @@ body {
     align-items: center;
     margin-top: 2em;
     margin-bottom: 26px;
+    cursor: pointer;
 }
 
 .teamInfo {
