@@ -11,6 +11,7 @@ const { offDayRequestReceiver } = require('./commands/offDayRequestReceiver');
 const { getOffDayRequestsList } = require('./commands/getOffDayRequestsList');
 const { updateRequestStatus } = require('./commands/updateRequestStatus');
 const { loadPersonalProfile } = require('./commands/loadPersonalProfile');
+const { getRequestsByUserId } = require('./commands/getRequestsByUserId');
 
 const app = express();
 
@@ -37,6 +38,8 @@ app.get('/api/get-requests', getOffDayRequestsList);
 app.post('/api/update-request-status', express.json(), updateRequestStatus);
 
 app.get('/api/get-profile-data', loadPersonalProfile);
+
+app.get('/api/get-requests-personal', getRequestsByUserId);
 
 const PORT = 3000;
 app.listen(PORT, () => {

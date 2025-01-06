@@ -89,8 +89,8 @@
 
 .btnHolder {
     display: flex;
-    gap: 1em; /* Spațiu între butoane */
-    justify-content: center; /* Aliniază butoanele pe orizontală */
+    gap: 1em; 
+    justify-content: center; 
     background: none;
     border: none;
     width: 16.66%;      

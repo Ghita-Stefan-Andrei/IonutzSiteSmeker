@@ -25,5 +25,6 @@ loadAccount(userId);
 fluturas(userId);
 pontaj(userId);
 cereri(userId);
-lista(userId)
+lista(userId, userType);
+listaConcedii(userId);
 const details = getMonthDetails(2024, 11); 

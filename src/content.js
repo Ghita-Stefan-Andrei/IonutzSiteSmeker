@@ -7,7 +7,7 @@ function getMenu()
 
 function getRapoarte()
 {
-    let content = `${getTitle('Rapoarte')}`
+    let content = `${getTitle('Lista cereri de concediu')}`
 
     return content
 }
