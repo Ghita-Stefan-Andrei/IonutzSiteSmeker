@@ -67,9 +67,9 @@ function getCereri()
                     <h1>Tip de concediu:</h1>
                     <select id = "concediuSelector" class = "dropdown dd2">
                         <option value="" disabled selected>Alege tipul de concediu</option>
-                        <option value="maternal">Concediu maternal</option>
-                        <option value="medical">Concediu medical</option>
-                        <option value="odihna">Concediu de odihna</option>
+                        <option value="Maternal">Concediu maternal</option>
+                        <option value="Medical">Concediu medical</option>
+                        <option value="Odihna">Concediu de odihna</option>
                     </select>
                 </div>
 

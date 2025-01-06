@@ -95,7 +95,7 @@
       "grossSalary": "9000",
       "netIncome": "5132",
       "offDays": [
-        21,
+        4,
         5
       ],
       "payChecks": [
@@ -147,7 +147,25 @@
           "meal": "540",
           "workedR": [],
           "workedO": [],
-          "leave": []
+          "leave": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ]
         },
         {
           "month": "Februarie",

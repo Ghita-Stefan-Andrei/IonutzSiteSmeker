@@ -25,7 +25,7 @@ function lista(ID, empType){
             console.error('Error fetching request:', error);
         }
         
-        document.querySelector('.content').innerHTML = getConcedii(data);
+        document.querySelector('.content').innerHTML = getConcedii(data, empType);
 
         const buttons = document.querySelectorAll('.requestList button');
         
