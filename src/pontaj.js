@@ -49,11 +49,6 @@ function pontaj(ID) {
             }
         }
 
-        const initialIndex = months.indexOf(targetMonth);
-        if (initialIndex >= 0) {
-            document.querySelector('.timesheettable').innerHTML = table[initialIndex];
-        }
-
         const monthSelector = document.querySelector('#monthSelector');
         const downloadButton = document.querySelector('.submite'); 
 
@@ -89,17 +84,6 @@ function pontaj(ID) {
                     const freeDayRow2 = document.querySelector(`.row-2-col-${col}.freeDay`);
                     row2Values.push(freeDayRow2 ? -1 : 0); 
                 }
-
-                const totalCell = document.querySelector(`.row-3-col-${col}`);
-                if (totalCell) {
-                    const totalValue = parseFloat(totalCell.textContent) || 0;
-                    row3Values.push(totalValue);
-                }
-            }
-        
-            if (row3Values.includes(0)) {
-                alert('Trebuie completate toate celulele din row-3!');
-                return;  
             }
 
             const dataToSend = {
@@ -150,11 +134,6 @@ function pontaj(ID) {
                     }
                 });
             }
-
-            if (index > currentIndex) {
-                console.warn(`Luna selectată (${selectedMonth}) este în viitor. Nu populăm date.`);
-                return;
-            }
             
             const data = pontaj[index]; 
             const workedR = data.workedR;
@@ -182,6 +161,17 @@ function pontaj(ID) {
                 }
             }
         });
+
+        const initialIndex = months.indexOf(targetMonth);
+        if (initialIndex >= 0) {
+            document.querySelector('.timesheettable').innerHTML = table[initialIndex];
+            
+            const data = pontaj[initialIndex]; 
+            const workedR = data.workedR;
+            const workedO = data.workedO;
+            const leave = data.leave;
+        
+            populateRows(workedR, workedO, leave);
+        }
     });
-    
 }

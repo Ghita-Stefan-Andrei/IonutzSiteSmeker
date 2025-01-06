@@ -56,6 +56,11 @@ function cereri(ID)
                 return;
             }
 
+            if (differenceInDays < 0){
+                alert(`Ceva este gresit, durata concediului este negativa: ${differenceInDays}`);
+                return;
+            }
+
             if (requestsCount){
                 alert("Prea multe cereri in asteptare!");
                 return;

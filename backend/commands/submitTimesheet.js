@@ -30,21 +30,20 @@ function submitTimesheet(req, res){
             if (payCheck) {
                 payCheck.workedR = row1;
                 payCheck.workedO = row2;
-            } /*else {
-                // Dacă luna nu există, adăugăm un obiect nou pentru luna respectivă
+            }
+            else {
+                mealTotal = 30 * row1.length;
                 user.payChecks.push({
                     month: month,
-                    salaryMonth: `${month} 2024`, // sau altă logică pentru anul curent
-                    totalWorkingDay: "20", // aici poți adăuga logica ta pentru totalWorkingDay
-                    finalNetIncome: "0", // completează cu datele dorite
-                    grossSalary: "0", // completează cu datele dorite
-                    netIncome: "0", // completează cu datele dorite
-                    meal: "0", // completează cu datele dorite
+                    salaryMonth: `${month} 2025`,
+                    totalWorkingDay: `${row1.length}`,
+                    finalNetIncome: `${mealTotal + user.netIncome}`,
+                    meal: mealTotal,
                     workedR: row1,
                     workedO: row2,
                     leave: []
                 });
-            }*/
+            } 
 
             fs.writeFile('./db/userData.json', JSON.stringify(data, null, 4), 'utf8', (writeErr) => {
                 if (writeErr) {

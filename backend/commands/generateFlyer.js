@@ -33,8 +33,8 @@ async function generateFlyer(req, res){
             payCheck.salaryMonth,
             payCheck.totalWorkingDay,
             payCheck.finalNetIncome,
-            payCheck.grossSalary,
-            payCheck.netIncome,
+            user.grossSalary,
+            user.netIncome,
             payCheck.meal
         );
 
