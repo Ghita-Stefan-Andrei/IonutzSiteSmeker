@@ -1,4 +1,4 @@
-function lista(ID, ){
+function lista(ID ){
     document.querySelector('.concedii').addEventListener('click', async () => {
         let data =[];
         try {
