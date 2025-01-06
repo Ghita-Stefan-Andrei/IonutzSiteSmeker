@@ -172,6 +172,8 @@ function pontaj(ID) {
             const leave = data.leave;
         
             populateRows(workedR, workedO, leave);
+
+            recalculateTotals();
         }
     });
 }
