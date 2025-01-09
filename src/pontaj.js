@@ -117,7 +117,6 @@ function pontaj(ID) {
         monthSelector.addEventListener('change', () => {
             const selectedMonth = monthSelector.value;
             const index = months.indexOf(selectedMonth);
-            const currentIndex = months.indexOf(targetMonth);
 
             if (index >= 0) {
                 document.querySelector('.month').innerHTML = selectedMonth;
@@ -143,7 +142,6 @@ function pontaj(ID) {
             populateRows(workedR, workedO, leave);
 
             recalculateTotals();
-
         });
 
         document.addEventListener('input', () => {

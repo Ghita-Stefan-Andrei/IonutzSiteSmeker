@@ -1,13 +1,3 @@
-document.querySelector('.menu').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = getMenu();
-});
-
-
-document.querySelector('.rapoarte').addEventListener('click', () => {
-    document.querySelector('.content').innerHTML = getRapoarte();
-});
-
-
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -27,4 +17,5 @@ pontaj(userId);
 cereri(userId);
 lista(userId, userType);
 listaConcedii(userId);
+vizConcedii();
 const details = getMonthDetails(2024, 11); 

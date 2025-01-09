@@ -26,7 +26,7 @@ function getRequestsByUserId(req, res) {
         const user = jsonData.requests.find(user => user.id === id);
 
         if (!user) {
-            return res.status(404).send('Utilizatorul nu a fost găsit.');
+            return res.status(404).send('');
         }
 
         // Returnarea listei `req`.

@@ -11,7 +11,7 @@ function getFlyer(data)
                 </tr>
     `;
 
-    for (let i = 0; i < data.month.length; i++) {
+    for (let i = 0; i < data.month.length - 2; i++) {
         tableHTML += `
             <tr class="dataLine">
                 <td class="month">${data.month[i]}</td>

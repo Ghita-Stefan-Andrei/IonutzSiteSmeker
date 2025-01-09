@@ -8,8 +8,9 @@
       "team": "LNS",
       "grossSalary": "9000",
       "netIncome": "5132",
+      "role": "Technical Support Specialist",
       "offDays": [
-        19,
+        11,
         5
       ],
       "payChecks": [
@@ -62,16 +63,16 @@
           "workedR": [],
           "workedO": [],
           "leave": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
             8,
             9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            7
+            10
           ]
         },
         {
@@ -94,8 +95,9 @@
       "team": "LNS",
       "grossSalary": "9000",
       "netIncome": "5132",
+      "role": "Customer Support Analyst",
       "offDays": [
-        4,
+        14,
         5
       ],
       "payChecks": [
@@ -148,23 +150,13 @@
           "workedR": [],
           "workedO": [],
           "leave": [
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
           ]
         },
         {
@@ -181,14 +173,15 @@
     },
     {
       "id": "00000003",
-      "name": "Simion Andrei Paul",
+      "name": "Andrei Paul",
       "email": "andrei.simion@dezzinex.com",
       "manager": "Mihai Lorena",
       "team": "LNS",
       "grossSalary": "9000",
       "netIncome": "5132",
+      "role": "Escalation Specialist",
       "offDays": [
-        21,
+        11,
         5
       ],
       "payChecks": [
@@ -230,7 +223,18 @@
           "meal": "540",
           "workedR": [],
           "workedO": [],
-          "leave": []
+          "leave": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12,
+            13,
+            14
+          ]
         },
         {
           "month": "Februarie",
@@ -252,8 +256,9 @@
       "team": "LNS",
       "grossSalary": "9000",
       "netIncome": "5132",
+      "role": "Technical Support Specialist",
       "offDays": [
-        21,
+        12,
         5
       ],
       "payChecks": [
@@ -305,7 +310,17 @@
           "meal": "540",
           "workedR": [],
           "workedO": [],
-          "leave": []
+          "leave": [
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22
+          ]
         },
         {
           "month": "Februarie",
@@ -321,14 +336,15 @@
     },
     {
       "id": "00000005",
-      "name": "Boicescu Mihaela Elena",
+      "name": "Boicescu Mihaela",
       "email": "mihaela.boicescu@dezzinex.com",
       "manager": "Mihai Lorena",
       "team": "LNS",
       "grossSalary": "9000",
       "netIncome": "5132",
+      "role": "Support Quality Assurance Specialist",
       "offDays": [
-        21,
+        10,
         5
       ],
       "payChecks": [
@@ -380,7 +396,19 @@
           "meal": "540",
           "workedR": [],
           "workedO": [],
-          "leave": []
+          "leave": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20
+          ]
         },
         {
           "month": "Februarie",
@@ -402,8 +430,9 @@
       "team": "LNS - Manager",
       "grossSalary": "12000",
       "netIncome": "7020",
+      "role": "Support Manager",
       "offDays": [
-        21,
+        7,
         5
       ],
       "payChecks": [
@@ -455,7 +484,22 @@
           "meal": "540",
           "workedR": [],
           "workedO": [],
-          "leave": []
+          "leave": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            13,
+            14,
+            15,
+            16,
+            17,
+            28,
+            29,
+            30,
+            31
+          ]
         },
         {
           "month": "Februarie",

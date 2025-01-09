@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 1em;
 }
 
 .navLine {
@@ -103,7 +104,7 @@ body {
 .navList li {
     display: flex;
     align-items: center;
-    color: white; /* Text alb */
+    color: white; 
 }
 
 .navList li img {
@@ -155,4 +156,13 @@ body {
     padding: 0.5em;
     -webkit-appearance: none;
     width: auto;
+}
+
+.centered-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 5em; 
+    text-align: center;
+    color: white; 
+    margin-top: 20%;
+    color: gray;
 }
