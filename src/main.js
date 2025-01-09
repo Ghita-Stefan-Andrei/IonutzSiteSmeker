@@ -1,5 +1,3 @@
-
-
 const urlParams = new URLSearchParams(window.location.search);
 let userId = urlParams.get('id');
 let userType = urlParams.get('type');
@@ -13,9 +11,13 @@ logInfoElement.addEventListener("click", function() {
 loadAccount(userId);
 
 fluturas(userId);
+
 pontaj(userId);
+
 cereri(userId);
+
 lista(userId, userType);
+
 listaConcedii(userId);
+
 vizConcedii();
-const details = getMonthDetails(2024, 11); 
